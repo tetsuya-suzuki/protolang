@@ -1,0 +1,38 @@
+graph TD
+
+n0["Program"]
+n1["FunctionDefinition<br/>name=main"]
+n2["Block"]
+n3["Declaration<br/>name=x"]
+n4["Number<br/>value=1"]
+n5["DoWhileStatement"]
+n6["Block"]
+n7["ExpressionStatement"]
+n8["Assignment"]
+n9["Identifier<br/>name=x"]
+n10["BinaryOp<br/>op=PLUS"]
+n11["Identifier<br/>name=x"]
+n12["Number<br/>value=1"]
+n13["BinaryOp<br/>op=LT"]
+n14["Identifier<br/>name=x"]
+n15["Number<br/>value=10"]
+n16["ReturnStatement"]
+n17["Identifier<br/>name=x"]
+
+n3 -->|initializer| n4
+n2 -->|items.0| n3
+n8 -->|left| n9
+n10 -->|left| n11
+n10 -->|right| n12
+n8 -->|right| n10
+n7 -->|expr| n8
+n6 -->|items.0| n7
+n5 -->|body| n6
+n13 -->|left| n14
+n13 -->|right| n15
+n5 -->|condition| n13
+n2 -->|items.1| n5
+n16 -->|expr| n17
+n2 -->|items.2| n16
+n1 -->|body| n2
+n0 -->|items.0| n1

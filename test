@@ -1,0 +1,17 @@
+#!/usr/bin/env bash
+set -eu
+
+SCRIPT_DIR="$(cd "$(dirname "$0")" && pwd)"
+cd "$SCRIPT_DIR"
+
+if [ ! -d ".venv" ]; then
+  echo "error: virtual environment not found" >&2
+  echo "run ./setup first" >&2
+  exit 1
+fi
+
+. .venv/bin/activate
+
+export PYTHONPATH=src
+
+python tests/run_tests.py "$@"

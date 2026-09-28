@@ -1,0 +1,20 @@
+graph TD
+
+n0["Program"]
+n1["FunctionDefinition<br/>name=main"]
+n2["Block"]
+n3["ExpressionStatement"]
+n4["Assignment"]
+n5["BinaryOp<br/>op=PLUS"]
+n6["Identifier<br/>name=x1"]
+n7["Number<br/>value=2"]
+n8["Number<br/>value=2"]
+
+n5 -->|left| n6
+n5 -->|right| n7
+n4 -->|left| n5
+n4 -->|right| n8
+n3 -->|expr| n4
+n2 -->|items.0| n3
+n1 -->|body| n2
+n0 -->|items.0| n1

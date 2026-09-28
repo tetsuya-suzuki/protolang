@@ -1,0 +1,6 @@
+.globals 1
+IPUSH 10
+STOREG 0
+
+HALT
+

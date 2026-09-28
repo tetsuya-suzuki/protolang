@@ -1,0 +1,12 @@
+function main() {
+  f(10);
+}
+
+function f_acc(n, acc) {
+  if (n == 0) { return acc; }
+  return f_acc(n-1, n*acc);
+}
+
+function f(n) {
+  return f_acc(n, 0);
+}

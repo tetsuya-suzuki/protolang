@@ -1,0 +1,58 @@
+graph TD
+
+n0["Program"]
+n1["FunctionDefinition<br/>name=main"]
+n2["Block"]
+n3["ReturnStatement"]
+n4["Call<br/>func_name=f"]
+n5["Number<br/>value=10"]
+n6["FunctionDefinition<br/>name=f_acc<br/>params=[n, acc]"]
+n7["Block"]
+n8["IfStatement"]
+n9["BinaryOp<br/>op=EQ"]
+n10["Identifier<br/>name=n"]
+n11["Number<br/>value=0"]
+n12["Block"]
+n13["ReturnStatement"]
+n14["Identifier<br/>name=acc"]
+n15["TailRecursiveCallStatement"]
+n16["BinaryOp<br/>op=MINUS"]
+n17["Identifier<br/>name=n"]
+n18["Number<br/>value=1"]
+n19["BinaryOp<br/>op=STAR"]
+n20["Identifier<br/>name=n"]
+n21["Identifier<br/>name=acc"]
+n22["FunctionDefinition<br/>name=f<br/>params=[n]"]
+n23["Block"]
+n24["ReturnStatement"]
+n25["Call<br/>func_name=f_acc"]
+n26["Identifier<br/>name=n"]
+n27["Number<br/>value=0"]
+
+n4 -->|args.0| n5
+n3 -->|expr| n4
+n2 -->|items.0| n3
+n1 -->|body| n2
+n0 -->|items.0| n1
+n9 -->|left| n10
+n9 -->|right| n11
+n8 -->|condition| n9
+n13 -->|expr| n14
+n12 -->|items.0| n13
+n8 -->|then_stmt| n12
+n7 -->|items.0| n8
+n16 -->|left| n17
+n16 -->|right| n18
+n15 -->|args.0| n16
+n19 -->|left| n20
+n19 -->|right| n21
+n15 -->|args.1| n19
+n7 -->|items.1| n15
+n6 -->|body| n7
+n0 -->|items.1| n6
+n25 -->|args.0| n26
+n25 -->|args.1| n27
+n24 -->|expr| n25
+n23 -->|items.0| n24
+n22 -->|body| n23
+n0 -->|items.2| n22

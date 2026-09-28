@@ -1,0 +1,64 @@
+graph TD
+
+n0["Program"]
+n1["FunctionDefinition<br/>name=main"]
+n2["Block"]
+n3["Declaration<br/>name=x"]
+n4["BinaryOp<br/>op=PLUS"]
+n5["Number<br/>value=6"]
+n6["Identifier<br/>name=x"]
+n7["Declaration<br/>name=y"]
+n8["BinaryOp<br/>op=PLUS"]
+n9["BinaryOp<br/>op=PLUS"]
+n10["BinaryOp<br/>op=PLUS"]
+n11["Number<br/>value=1"]
+n12["Identifier<br/>name=x"]
+n13["Number<br/>value=2"]
+n14["Number<br/>value=3"]
+n15["Declaration<br/>name=z"]
+n16["Identifier<br/>name=x"]
+n17["Declaration<br/>name=v"]
+n18["BinaryOp<br/>op=STAR"]
+n19["Number<br/>value=0"]
+n20["Identifier<br/>name=x"]
+n21["Declaration<br/>name=w"]
+n22["LogicalOr"]
+n23["Identifier<br/>name=x"]
+n24["Number<br/>value=1"]
+n25["Declaration<br/>name=s"]
+n26["LogicalAnd"]
+n27["Identifier<br/>name=x"]
+n28["Identifier<br/>name=y"]
+n29["Number<br/>value=0"]
+n30["ReturnStatement"]
+
+n4 -->|left| n5
+n4 -->|right| n6
+n3 -->|initializer| n4
+n2 -->|items.0| n3
+n10 -->|left| n11
+n10 -->|right| n12
+n9 -->|left| n10
+n9 -->|right| n13
+n8 -->|left| n9
+n8 -->|right| n14
+n7 -->|initializer| n8
+n2 -->|items.1| n7
+n15 -->|initializer| n16
+n2 -->|items.2| n15
+n18 -->|left| n19
+n18 -->|right| n20
+n17 -->|initializer| n18
+n2 -->|items.3| n17
+n22 -->|operands.0| n23
+n22 -->|operands.1| n24
+n21 -->|initializer| n22
+n2 -->|items.4| n21
+n26 -->|operands.0| n27
+n26 -->|operands.1| n28
+n26 -->|operands.2| n29
+n25 -->|initializer| n26
+n2 -->|items.5| n25
+n2 -->|items.6| n30
+n1 -->|body| n2
+n0 -->|items.0| n1

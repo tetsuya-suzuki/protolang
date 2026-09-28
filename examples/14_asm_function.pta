@@ -1,0 +1,11 @@
+     .globals 0 ; no global variables
+     IPUSH 3    ; 2nd argument
+     IPUSH 2    ; 1st argument
+     CALL ADD
+     CLEAN 2    ; remove the two arguments from the stack
+     HALT
+ADD: ALLOC 0    ; no local variables
+     LOADA 0    ; 1st argument
+     LOADA 1    ; 2nd argument
+     IADD
+     RET

@@ -1,0 +1,7 @@
+#!/bin/bash
+
+for file in *.ptl; do
+  [ -f "$file" ] || continue
+  echo ${file%.ptl}_ast.mmd
+  ../../../ptlc --dump-ast $file > ${file%.ptl}_ast.mmd
+done

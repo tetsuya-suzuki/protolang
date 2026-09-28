@@ -1,0 +1,10 @@
+function add(a, b) asm {
+  LOADA 0
+  LOADA 1
+  IADD
+  RET
+}
+
+function main() {
+  return add(2, 3);
+}

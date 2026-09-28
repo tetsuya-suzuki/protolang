@@ -1,0 +1,15 @@
+function sum_acc(n, acc) {
+    if (n == 0) {
+        return acc;
+    } else {
+        return sum_acc(n-1, n+acc);
+    }
+}
+
+function sum(n) {
+    return sum_acc(n, 0);
+}
+
+function main() {
+    return sum(10);
+}
