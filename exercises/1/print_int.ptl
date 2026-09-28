@@ -1,0 +1,43 @@
+function print_ch(x) asm {
+  LOADA 0
+  CPRINT
+  IPUSH 0
+  RET
+}
+
+function print_eol() {
+  print_ch(10);
+}
+
+function print_sp() {
+  print_ch(32);
+}
+
+function print_minus() {
+  print_ch(45);
+}
+
+function print_digit(d) {
+  if (d < 0) {
+    return 0;
+  } else {
+  }
+  if (d > 9) {
+    return 0;
+  } else {
+  }
+  print_ch(48+d);
+}
+
+function print_int(x) {
+  print_minus();
+}
+
+function main() {
+  print_int(-265);
+  print_sp();
+  print_int(0);
+  print_sp();
+  print_int(48);
+  print_eol();
+}

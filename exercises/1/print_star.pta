@@ -1,0 +1,4 @@
+.globals 0
+IPUSH 42
+CPRINT
+HALT

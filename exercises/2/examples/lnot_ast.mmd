@@ -1,0 +1,14 @@
+graph TD
+
+n0["Program"]
+n1["FunctionDefinition<br/>name=main"]
+n2["Block"]
+n3["ExpressionStatement"]
+n4["UnaryOp<br/>op=LNOT"]
+n5["Number<br/>value=0"]
+
+n4 -->|expr| n5
+n3 -->|expr| n4
+n2 -->|items.0| n3
+n1 -->|body| n2
+n0 -->|items.0| n1

@@ -1,0 +1,24 @@
+graph TD
+
+n0["Program"]
+n1["FunctionDefinition<br/>name=main"]
+n2["Block"]
+n3["ExpressionStatement"]
+n4["LogicalOr"]
+n5["LogicalAnd"]
+n6["UnaryOp<br/>op=LNOT"]
+n7["Number<br/>value=0"]
+n8["Number<br/>value=1"]
+n9["Number<br/>value=2"]
+n10["Number<br/>value=3"]
+
+n6 -->|expr| n7
+n5 -->|operands.0| n6
+n5 -->|operands.1| n8
+n5 -->|operands.2| n9
+n4 -->|operands.0| n5
+n4 -->|operands.1| n10
+n3 -->|expr| n4
+n2 -->|items.0| n3
+n1 -->|body| n2
+n0 -->|items.0| n1

@@ -1,0 +1,17 @@
+function main() {
+    return gcd(102, 36);
+}
+
+function gcd(a, b) {
+    while(b != 0) {
+        var t = mod(a, b);
+        a = b;
+        b = t;
+    }
+    return a;
+}
+
+function mod(a, b) {
+    var q = a/b;
+    return a-q*b;
+}

@@ -1,0 +1,57 @@
+# Files listed below are automatically generated and should not be committed
+
+# =========================
+# Backup files
+# =========================
+*~
+
+# =========================
+# Python bytecode
+# =========================
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+
+# =========================
+# Virtual environments
+# =========================
+.venv/
+venv/
+.venv-dev/
+venv-dev/
+
+# =========================
+# Test / coverage artifacts
+# =========================
+.pytest_cache/
+.coverage
+htmlcov/
+
+# =========================
+# Build / distribution artifacts
+# =========================
+build/
+dist/
+*.egg-info/
+
+# =========================
+# OS-specific files
+# =========================
+.DS_Store
+Thumbs.db
+
+# =========================
+# Editor settings (VSCode)
+# =========================
+.vscode/*
+
+# Keep shared VSCode settings (recommended for teaching)
+!.vscode/settings.json
+!.vscode/launch.json
+
+# =========================
+# Archive files (distribution)
+# =========================
+*.zip
+

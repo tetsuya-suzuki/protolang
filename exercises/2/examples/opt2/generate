@@ -1,0 +1,11 @@
+#!/bin/bash
+
+for opt_level in 0 2; do
+  for file in *.ptl; do
+    [ -f "$file" ] || continue
+    echo ${file%.ptl}_O${opt_level}
+    ../../../../ptlc -O${opt_level} --dump-transformed-ast $file > ${file%.ptl}_O${opt_level}.ast.mmd
+    ../../../../ptlc -O${opt_level} --dump-asm $file > ${file%.ptl}_O${opt_level}.pta
+    ../../../../ptlc -O${opt_level} --trace-vm $file > ${file%.ptl}_O${opt_level}.trace
+  done
+done

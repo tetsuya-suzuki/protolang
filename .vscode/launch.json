@@ -1,0 +1,17 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "Run ProtoLang example",
+      "type": "debugpy",
+      "request": "launch",
+      "module": "protolang.main",
+      "env": {
+        "PYTHONPATH": "${workspaceFolder}/src"
+      },
+      "args": [
+        "examples/00_gcd.ptl"
+      ]
+    }
+  ]
+}

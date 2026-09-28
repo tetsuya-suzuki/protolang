@@ -1,0 +1,8 @@
+function main() {
+  var x = 1+2+3+x;
+  var y = 1+x+2+3;
+  var z = 1*x;
+  var v = 0*x;
+  var w = x || 1 || y || z;
+  var s = x && y && 0 && z;
+}

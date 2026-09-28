@@ -1,0 +1,5 @@
+var g = 10;
+
+function main() {
+    return g + 5;
+}

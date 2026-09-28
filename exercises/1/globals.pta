@@ -1,0 +1,5 @@
+.globals 1
+IPUSH 2
+STOREG 0
+LOADG 0
+HALT
