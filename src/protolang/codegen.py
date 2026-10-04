@@ -404,10 +404,6 @@ class CodeGenerator:
         # TODO: EX2-3 Extending the Semantic Analyzer and Code Generator
         # Emit code for the logical OR expression according to the specification.
 
-        true_addr = self.current_address()
-        for pos in jump_pos:
-            self.patch(pos, true_addr)
-
     def emit_call_expression(self, expr: Call) -> None:
         for arg in reversed(expr.args):
             self.emit_expression(arg)
