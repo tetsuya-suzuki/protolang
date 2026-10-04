@@ -332,6 +332,7 @@ class SemanticAnalyzer:
             self.analyze_statement(stmt.then_stmt)
             # TODO: EX2-3 Extending the Semantic Analyzer and Code Generator
             # Analyze the else statement only if it exists.
+            assert stmt.else_stmt is not None
             self.analyze_statement(stmt.else_stmt)
             return
 

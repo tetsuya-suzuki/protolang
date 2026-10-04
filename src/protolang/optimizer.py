@@ -12,8 +12,7 @@ from .ast import UnaryOp
 from .asm_parser import AsmBlock
 from .ast import Block
 from .token import TokenKind
-from .ast import Program
-
+from .ast import Expression
 
 class ConstantFolder(ASTTransformer):
     """Fold expressions whose operands are integer constants."""
@@ -49,7 +48,7 @@ class AlgebraicSimplifier(ASTTransformer):
         return node
 
     def transform_LogicalOr(self, node: LogicalOr) -> ASTNode:
-        operands = []
+        operands: list[Expression] = []
         for operand in node.operands:
             # TODO: EX2-4 Extending the Optimizer (1)
             pass
@@ -61,7 +60,7 @@ class AlgebraicSimplifier(ASTTransformer):
         return node
 
     def transform_LogicalAnd(self, node: LogicalAnd) -> ASTNode:
-        operands = []
+        operands: list[Expression] = []
         for operand in node.operands:
             # TODO: EX2-4 Extending the Optimizer (1)
             pass
